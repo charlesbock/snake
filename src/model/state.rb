@@ -4,7 +4,7 @@ module Model
     UP = :up
     RIGHT = :right
     DOWN = :down
-    LEFT = :down
+    LEFT = :left
   end
   class Coord < Struct.new(:row, :col)
   end
