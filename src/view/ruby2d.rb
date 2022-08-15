@@ -23,6 +23,8 @@ module View
     end
 
     def render_game(state)
+      extend Ruby2D::DSL
+      close if state.game_finished
       render_food(state)
       render_snake(state)
     end
@@ -54,7 +56,7 @@ module View
         )
       end
     end
-    
+
     def handle_key_event(event)
       case event.key
       when 'up'
